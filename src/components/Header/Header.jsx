@@ -1,17 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
     return (
-        <div>
+        <div className=''>
 
-            <nav className='text-blue-700'>
+            <nav className='text-blue-700 flex gap-2 items-center justify-center'>
                 <span className='text-black'>My website</span>
                 <br />
                 <Link to="/">Home</Link>
-                <Link to="/users">Our Users</Link>
-                <Link to="/about">About us</Link>
-                <Link to="/contact">Contact Us</Link>
+                <NavLink to='/users'>Users</NavLink>
+                <NavLink to="/posts">Posts</NavLink>
+                <NavLink to="/about">About us </NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+
             </nav>
         </div>
     );
